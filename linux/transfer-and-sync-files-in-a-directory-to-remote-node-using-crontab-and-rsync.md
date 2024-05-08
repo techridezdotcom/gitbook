@@ -58,7 +58,7 @@ crontab -e
 this is open crontab in default editor, eg nano or vi. now type the&#x20;
 
 ```sh
-5 * * * * bash /root/backup.sh
+* * * * * bash /script/backup.sh
 
 ```
 
