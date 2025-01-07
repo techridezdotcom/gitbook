@@ -51,3 +51,5 @@
   * [🗃️ Transfer & sync files in a directory to remote node using crontab & rsync](linux/transfer-and-sync-files-in-a-directory-to-remote-node-using-crontab-and-rsync.md)
 * [Networking](networking/README.md)
   * [Upgrade Cisco9200L firmware to recommended](networking/upgrade-cisco9200l-firmware-to-recommended.md)
+* [Cyber Security](cyber-security/README.md)
+  * [ISC² (International Information System Security Certification Consortium)](cyber-security/isc-international-information-system-security-certification-consortium.md)
