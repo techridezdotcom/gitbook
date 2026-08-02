@@ -115,3 +115,36 @@ Query OK, 0 rows affected (0.01 sec)
 {% hint style="info" %}
 SET PERSIST will make sure the configuration is loaded in the next restart. Configuration set by this command is stored inside /var/lib/mysql/mysqld-auto.cnf.
 {% endhint %}
+
+## Method #4 Recover MySQL from a Corrupted Binary Log
+
+If MySQL fails to start because the last binary log is corrupted:
+
+1. Back up the last binary log file:
+
+```
+mv /var/lib/mysql/binlog.008422 /root/binlog.008422.bak
+```
+
+2. Edit the binary log index:
+
+```
+nano /var/lib/mysql/binlog.index
+```
+
+3. Remove the entry for the corrupted binary log:
+
+```
+./binlog.008422
+```
+
+4. Save the file and restart MySQL:
+
+```
+systemctl restart mysql
+```
+
+{% hint style="info" %}
+**Note:** Replace `binlog.008422` with the binary log filename reported in `/var/log/mysql/error.log`.
+{% endhint %}
+
